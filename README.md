@@ -1,6 +1,6 @@
 # README
 
-# Learning Rails
+# Learning Rails for Startup Institute pre-work
 
 Learning Rails with a tutorial from [learn-rails.com](http://learn-rails.com/).
 Book 2
