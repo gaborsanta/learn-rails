@@ -3,7 +3,7 @@
 # Learning Rails
 
 Learning Rails with a tutorial from [learn-rails.com](http://learn-rails.com/).
-
+Book 2
 
 * Ruby version 2.3.2
 
