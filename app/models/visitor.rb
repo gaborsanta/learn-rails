@@ -7,11 +7,13 @@ class Visitor
   def subscribe
     mailchimp = Gibbon::Request.new(api_key: Rails.application.secrets.mailchimp_api_key)
     list_id = Rails.application.secrets.mailchimp_list_id
-    result = mailchimp.lists(list_id).members.create(
+
+    result = mailchimp.lists(list_id).members(lower_case_md5_hashed_email_address).upsert(
       body: {
         email_address: self.email,
-        status: 'subscribed'
-    })
+        status: "subscribed"
+        #merge_fields: {FNAME: "First Name", LNAME: "Last Name"}
+        })
     Rails.logger.info("Subscribed #{self.email} to MailChimp") if result
   end
 
